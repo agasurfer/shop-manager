@@ -1,0 +1,89 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    width: 200px;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 10px;
+    
+    
+        background: #8585c0;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #5199cc, #9595c9);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #69a0c7, #7474BF);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.3s ease-in-out;
+
+}
+
+.product-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    
+}
+
+.product-card h1 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.editBtn {
+    width: 80px;
+    height: 20px;
+    border-radius: 12px;
+    background-color: rgb(249, 210, 36);
+        color: #547FC3;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.3s ease-in-out;
+
+        outline: none;
+        border: none;
+        cursor: pointer;
+}
+
+.editBtn:hover {
+transform: scale(1.1);
+color: #4274c4;;
+}
+
+.stockdiv{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.stockdiv button {
+    border-radius: 12px;
+        background-color: rgb(249, 210, 36);
+        color: #547FC3;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.3s ease-in-out;
+        padding: 5px;
+        width: 22px;
+        height: 22px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
