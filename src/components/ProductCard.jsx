@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom'
 
 const ProductCard = ({products}) => {
 
-   const [localStock, setLocalStock] = useState(products.stock); // Stock Localstate
+   const [localStock, setLocalStock] = useState(Number(products.stock)); // Stock Localstate
 
     const handlePlusStock = async () => {
-  
+    
+    const stockAsNumber = Number(localStock);
+
     try {
-      const updatedStock = { ...products, stock: localStock +1 };
+      const updatedStock = { ...products, stock: stockAsNumber +1 };
 
       const response = await fetch(`https://6756f733c0a427baf94b2bb5.mockapi.io/react-training-api/products/${products.id}`, {
         method: "PUT",  
@@ -38,7 +40,9 @@ const ProductCard = ({products}) => {
 const handleMinusStock = async () => {
   
     try {
-      const updatedStock = { ...products, stock: localStock -1 };
+
+      const stockAsNumber = Number(localStock);
+      const updatedStock = { ...products, stock: stockAsNumber -1 };
 
       const response = await fetch(`https://6756f733c0a427baf94b2bb5.mockapi.io/react-training-api/products/${products.id}`, {
         method: "PUT",  
